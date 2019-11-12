@@ -2,6 +2,7 @@
   "description": "Telegram MTProto library",
   "name": "telegram-mtproto",
   "license": "MIT",
+  "version": "3.0.0",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
   "module": "es/index.js",
@@ -15,7 +16,7 @@
     "build:webogram": "webpack --config config/webogram/webpack.config.js",
     "build:webogram:production": "webpack --config config/webogram/webpack-production.config.js",
     "rebuild:webogram": "npm run build:webogram:vendor && npm run build:webogram",
-    "rebuild:webogram:production": "npm run build:webogram:vendor:production && npm run build:webogram:production",
+    "rebuild:webogram:production": "npm run clean:dist && npm run build:webogram:vendor:production && npm run build:webogram:production",
     "rebuild:cjs": "npm run clean:cjs & npm run build:cjs",
     "build:cjs": "cross-env BABEL_ENV=commonjs babel src/ -d lib -s",
     "build:async": "cross-env BABEL_ENV=commonjs babel src/ -d lib -s --no-babelrc --plugins=transform-flow-strip-types,transform-es2015-modules-commonjs,transform-class-properties,transform-object-rest-spread,closure-elimination",
@@ -23,8 +24,8 @@
     "rebuild:es": "npm run clean:es & npm run build:es",
     "build:es": "babel src/ -d es -s",
     "clean:es": "rimraf es/",
-    "test": "node --harmony test/node.test.js",
-    "prepublish": "npm run rebuild:es && npm run rebuild:cjs"
+    "clean:dist": "rimraf dist/",
+    "prepublish": "npm run rebuild:es && npm run rebuild:cjs && npm run rebuild:webogram:production"
   },
   "author": "Zero Bias",
   "dependencies": {
@@ -110,6 +111,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://git.d0v.me/telegram-web/telegram-mtproto"
-  },
-  "version": "2.2.2"
+  }
 }
