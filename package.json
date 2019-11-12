@@ -26,7 +26,7 @@
     "clean:es": "rimraf es/",
     "clean:dist": "rimraf dist/",
     "prepublish": "npm run rebuild:es && npm run rebuild:cjs && npm run rebuild:webogram:production",
-    "postinstall": "npm run rebuild:es && npm run rebuild:cjs && npm run rebuild:webogram:production"
+    "postinstall": "npm install && npm run rebuild:es && npm run rebuild:cjs && npm run rebuild:webogram:production"
   },
   "author": "Zero Bias",
   "dependencies": {
