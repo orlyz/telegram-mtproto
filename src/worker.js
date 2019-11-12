@@ -11,16 +11,16 @@ const runTask = data => {
     case 'aes-encrypt': return aesEncryptSync(data.bytes, data.keyBytes, data.ivBytes)
     case 'aes-decrypt': return aesDecryptSync(data.encryptedBytes,
                                               data.keyBytes, data.ivBytes)
-    default:
-      throw new Error(`Unknown task: ${data.task}`)
+    /*default:
+      throw new Error(`Unknown task: ${data.task}`)*/
   }
 }
 
 onmessage = function(e) {
   if (e.data === '') {
-    console.info('empty crypto task')
+    //console.info('empty crypto task')
   } else if (typeof e.data === 'string') {
-    console.info('crypto task string message', e.data)
+    //console.info('crypto task string message', e.data)
   } else {
     const taskID = e.data.taskID
     const result = runTask(e.data)
