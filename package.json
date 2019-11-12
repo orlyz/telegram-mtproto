@@ -78,7 +78,7 @@
     "node": ">=10.0"
   },
   "bugs": {
-    "url": "https://git.d0v.me/telegram-web/telegram-mtproto/issues"
+    "url": "https://github.com/orlyz/telegram-mtproto/issues"
   },
   "files": [
     "lib",
@@ -110,6 +110,6 @@
   "readme": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://git.d0v.me/telegram-web/telegram-mtproto"
+    "url": "git+https://github.com/orlyz/telegram-mtproto.git"
   }
 }
