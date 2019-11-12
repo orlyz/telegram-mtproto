@@ -15,7 +15,8 @@ npm-debug.log
 cldr
 coverage/
 .nyc_output
-dist/**
+dist
 logs/**
 typings.json
 typings/**
+yarn.lock

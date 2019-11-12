@@ -1,6 +1,5 @@
 # telegram-mtproto
-
-[![npm version][npm-image]][npm-url]
+Forked from https://github.com/zerobias/telegram-mtproto
 
 **Mobile Telegram Protocol** [(MTProto)](https://core.telegram.org/mtproto) пакет написан на **ES6**
 

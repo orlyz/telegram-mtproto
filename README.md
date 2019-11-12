@@ -1,11 +1,5 @@
-# ‼️ **Better use [Telethon](https://lonamiwebs.github.io/Telethon/)**
-
-It does have docs
-
-
 # telegram-mtproto
-
-[![npm version][npm-image]][npm-url]
+Forked from https://github.com/zerobias/telegram-mtproto
 
 **Telegram Mobile Protocol** [(MTProto)](https://core.telegram.org/mtproto) library in **es6**
 
