@@ -2,7 +2,7 @@
   "description": "Telegram MTProto library",
   "name": "telegram-mtproto",
   "license": "MIT",
-  "version": "3.0.1",
+  "version": "3.0.0",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
   "module": "es/index.js",
@@ -25,7 +25,7 @@
     "build:es": "babel src/ -d es -s",
     "clean:es": "rimraf es/",
     "clean:dist": "rimraf dist/",
-    "prepare": "npm install && npm run rebuild:es && npm run rebuild:cjs && npm run rebuild:webogram:production"
+    "prepare": "npm run rebuild:es && npm run rebuild:cjs && npm run rebuild:webogram:production"
   },
   "author": "Zero Bias",
   "dependencies": {
