@@ -1,8 +1,8 @@
 import MTProto from './service/main/wrap'
 
 export { CryptoWorker } from './crypto'
-export { bin } from './bin'
-export { ApiManager } from './service/api-manager/index'
+export * from './bin'
+export { ApiManager } from './service/api-manager'
 export { setLogger } from './util/log'
 
 import * as MtpTimeManager from './service/time-manager'
