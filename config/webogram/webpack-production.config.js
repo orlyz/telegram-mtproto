@@ -8,9 +8,9 @@ const build = resolve(process.cwd(), 'dist')
 const vendorDll = require(join(build, 'vendor.json'))
 
 const config = {
-  devtool: 'source-map',
   cache  : true,
 
+  mode   : 'production',
   entry  : './index.js',
   context: source,
   resolve: {
@@ -57,13 +57,13 @@ const config = {
       manifest: vendorDll
     }),
     new webpack.LoaderOptionsPlugin({
-			options: {
-				worker: {
-					output: {
-						filename: 'hash.worker.js',
-						chunkFilename: '[id].hash.worker.js'
+      options: {
+        worker: {
+          output: {
+            filename     : 'hash.worker.js',
+            chunkFilename: '[id].hash.worker.js'
           }
-				}
+        }
       }
     })
   ],

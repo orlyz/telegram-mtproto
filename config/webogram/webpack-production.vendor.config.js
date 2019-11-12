@@ -6,8 +6,8 @@ const source = resolve(process.cwd(), 'src')
 const build = resolve(process.cwd(), 'dist')
 
 const config = {
-  devtool: 'source-map',
   cache  : true,
+  mode   : 'production',
 
   entry: {
     vendor: [
