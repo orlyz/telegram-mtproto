@@ -1,7 +1,7 @@
 import { pqPrimeFactorization, bytesModPow, sha1HashSync,
   aesEncryptSync, aesDecryptSync } from './bin'
 
-console.info('Crypto worker registered')
+// console.info('Crypto worker registered')
 
 const runTask = data => {
   switch (data.task) {
