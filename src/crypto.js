@@ -45,9 +45,9 @@ if (workerEnable) {
   // }
   tmpWorker.onmessage = e => {
     if (e.data === 'ready') {
-      console.info('CW ready')
+      //console.info('CW ready')
     } else if (!isCryptoTask(e.data)) {
-      console.info('Not crypto task', e, e.data)
+      //console.info('Not crypto task', e, e.data)
       return e
     } else
     return webWorker
@@ -56,10 +56,10 @@ if (workerEnable) {
   }
 
   tmpWorker.onerror = function(error) {
-    console.error('CW error', error, error.stack)
+    // console.error('CW error', error, error.stack)
     webWorker = false
   }
-  tmpWorker.postMessage('b')
+  //tmpWorker.postMessage('b')
   webWorker = tmpWorker
 }
 
@@ -87,7 +87,7 @@ const sha1Hash = bytes => {
     return webCrypto.digest({ name: 'SHA-1' }, bytesTyped).then(digest =>
       // console.log(rework_d_T(), 'Native sha1 done')
         digest, e => {
-      console.error('Crypto digest error', e)
+      //console.error('Crypto digest error', e)
       useSha1Crypto = false
       return sha1HashSync(bytes)
     })
@@ -103,7 +103,7 @@ const sha256Hash = bytes => {
       .then(identity
         // console.log(rework_d_T(), 'Native sha1 done')
         , e => {
-          console.error('Crypto digest error', e)
+          //console.error('Crypto digest error', e)
           useSha256Crypto = false
           return sha256HashSync(bytes)
         })
